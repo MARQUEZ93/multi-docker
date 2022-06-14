@@ -17,10 +17,10 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Learn React123
           </a>
-          <Link to="/">Home</Link>
-          <Link to="/otherpage">Other Page</Link>
+          <Link to="/">Home123</Link>
+          <Link to="/otherpage">Other Page123</Link>
         </header>
         <div>
           <Route exact path="/" component={Fib} />
