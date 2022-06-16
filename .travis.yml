@@ -4,7 +4,7 @@ app: 'multi-docker'
 bucket_name: 'elasticbeanstalk-us-east-1-712233341720'
 bucket_path: 'docker-multi'
 # might be MultiDocker-env TBD
-env: 'Multidocker-env'
+env: 'multidocker-env'
 region: 'us-east-1'
 access_key_id: $AWS_ACCESS_KEY
 secret_access_key: $AWS_SECRET_KEY
