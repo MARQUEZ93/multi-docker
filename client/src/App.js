@@ -17,7 +17,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React1234fsd
+            Learn React1234fsdr
           </a>
           <Link to="/">God</Link>
           <Link to="/otherpage">Other Page123</Link>
