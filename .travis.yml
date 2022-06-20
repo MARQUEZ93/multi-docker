@@ -3,7 +3,6 @@ sudo: required
 app: 'multi-docker'
 bucket_name: 'elasticbeanstalk-us-east-1-712233341720'
 bucket_path: 'docker-multi'
-# might be MultiDocker-env TBD
 env: 'Multidocker-env-1'
 region: 'us-east-1'
 access_key_id: $AWS_ACCESS_KEY
@@ -16,10 +15,10 @@ script:
     - docker run -e CI=true aemarquez1993/react-test npm test
 
 after_success:
-    - docker build -it aemarquez1993/multi-client ./client
-    - docker build -it aemarquez1993/multi-worker ./worker
-    - docker build -it aemarquez1993/multi-nginx ./nginx
-    - docker build -it aemarquez1993/multi-server ./server
+    - docker build -t aemarquez1993/multi-client ./client
+    - docker build -t aemarquez1993/multi-worker ./worker
+    - docker build -t aemarquez1993/multi-nginx ./nginx
+    - docker build -t aemarquez1993/multi-server ./server
     # Log in to Docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     # Push images to docker hub
