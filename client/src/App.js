@@ -19,7 +19,7 @@ function App() {
           >
             Learn React1234fsd
           </a>
-          <Link to="/">Home1234</Link>
+          <Link to="/">God</Link>
           <Link to="/otherpage">Other Page123</Link>
         </header>
         <div>
