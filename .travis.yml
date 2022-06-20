@@ -1,12 +1,5 @@
 language: generic 
 sudo: required
-app: 'multi-docker'
-bucket_name: 'elasticbeanstalk-us-east-1-712233341720'
-bucket_path: 'docker-multi'
-env: 'Multidocker-env-1'
-region: 'us-east-1'
-access_key_id: $AWS_ACCESS_KEY
-secret_access_key: $AWS_SECRET_KEY
 services:
     - docker
 before_install:
@@ -26,3 +19,15 @@ after_success:
     - docker push aemarquez1993/multi-worker
     - docker push aemarquez1993/multi-nginx
     - docker push aemarquez1993/multi-server
+
+deploy:
+    provider: elasticbeanstalk
+    region: 'us-east-1'
+    app: 'multi-docker'
+    env: 'Multidocker-env-1'
+    bucket_name: 'elasticbeanstalk-us-east-1-712233341720'
+    bucket_path: 'docker-multi'
+    on:
+      branch: main
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
